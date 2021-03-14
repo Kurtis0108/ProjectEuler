@@ -20,14 +20,13 @@ int main()
 
     //interate x and y as n & n+1 of fibonacci sequence
     //through each loop check if either is divisible by 2 (even), add them to sum if so
-    //potentially able to optimise so that only 1 integer is needed in global scope, reducing amount of if conditions in loop
     
-    while   (y < 4000000 || x < 4000000)    {
+    while   (x < 4000000){
     if      (x % 2 == 0){sum = sum+x;}
     else if (y % 2 == 0){sum = sum+y;}
     x = x + y;
     y = y + x;
-                                            }
+    }
     
     printf  ("%d", sum);
     return  0;
